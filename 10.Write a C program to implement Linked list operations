@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+int main() {
+    struct Node a = {10, NULL}, b = {20, NULL}, c = {30, NULL};
+    a.next = &b; b.next = &c;
+    struct Node *p = &a;
+    while (p) {
+        printf("%d -> ", p->data);
+        p = p->next;
+    }
+    printf("NULL");
+    return 0;
+}
