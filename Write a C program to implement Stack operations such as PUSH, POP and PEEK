@@ -1,0 +1,11 @@
+11. #include <stdio.h>
+int stack[5], top = -1;
+
+int main() {
+    stack[++top] = 10;
+    stack[++top] = 20;
+    printf("Peek: %d\n", stack[top]);
+    top--; // pop
+    printf("After pop, Peek: %d\n", stack[top]);
+    return 0;
+}
